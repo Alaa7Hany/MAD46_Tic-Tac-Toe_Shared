@@ -14,13 +14,16 @@ public class InvitationDTO implements Serializable {
     
     private String fromUsername;
     private String toUsername;
+    private int score;
 
-    public InvitationDTO(String fromUsername, String toUsername) {
+    public InvitationDTO(String fromUsername, String toUsername,int score) {
         this.fromUsername = fromUsername;
         this.toUsername = toUsername;
+        this.score = score;
     }
 
     public String getFromUsername() { return fromUsername; }
     public String getToUsername()   { return toUsername;   }
+    public int getScore()   { return score;   }
     
 }
