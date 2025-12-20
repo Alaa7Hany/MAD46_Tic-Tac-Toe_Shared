@@ -8,6 +8,19 @@ package com.mycompany.tictactoeshared;
  *
  * @author emada
  */
-public class InvitationDTO {
+import java.io.Serializable;
+
+public class InvitationDTO implements Serializable {
+    
+    private String fromUsername;
+    private String toUsername;
+
+    public InvitationDTO(String fromUsername, String toUsername) {
+        this.fromUsername = fromUsername;
+        this.toUsername = toUsername;
+    }
+
+    public String getFromUsername() { return fromUsername; }
+    public String getToUsername()   { return toUsername;   }
     
 }
