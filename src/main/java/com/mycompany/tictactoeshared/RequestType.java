@@ -17,5 +17,6 @@ public enum RequestType {
     REJECT_INVITE,
     MOVE,
     GAME_OVER,
-    LOGOUT
+    LOGOUT,
+    START_GAME
 }
