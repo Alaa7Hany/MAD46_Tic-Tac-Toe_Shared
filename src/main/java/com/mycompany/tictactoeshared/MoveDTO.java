@@ -11,12 +11,17 @@ import java.io.Serializable;
  * @author hp
  */
 public class MoveDTO implements Serializable {
+
     private int cellNo;
     private String symbol;
+    private boolean win;
+    private boolean draw;
 
-    public MoveDTO(int cellNo, String symbol) {
+    public MoveDTO(int cellNo, String symbol, boolean win, boolean draw) {
         this.cellNo = cellNo;
         this.symbol = symbol;
+        this.win = win;
+        this.draw = draw;
     }
 
     public int getCellNo() {
@@ -26,5 +31,13 @@ public class MoveDTO implements Serializable {
     public String getSymbol() {
         return symbol;
     }
-    
+
+    public boolean isWin() {
+        return win;
+    }
+
+    public boolean isDraw() {
+        return draw;
+    }
+
 }
