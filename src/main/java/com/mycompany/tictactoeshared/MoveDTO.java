@@ -11,14 +11,22 @@ import java.io.Serializable;
  * @author hp
  */
 public class MoveDTO implements Serializable {
+    private String sessionID;
     private int cellNo;
     private String symbol;
-
-    public MoveDTO(int cellNo, String symbol) {
+    private boolean win;
+    private boolean draw;
+    
+    public MoveDTO( String sessionID,int cellNo, String symbol, boolean win, boolean draw) {
+        this.sessionID = sessionID;
         this.cellNo = cellNo;
         this.symbol = symbol;
+        this.win = win;
+        this.draw = draw;
     }
-
+    public String sessionId(){
+      return  sessionID;
+    }
     public int getCellNo() {
         return cellNo;
     }
@@ -26,5 +34,13 @@ public class MoveDTO implements Serializable {
     public String getSymbol() {
         return symbol;
     }
-    
+
+    public boolean isWin() {
+        return win;
+    }
+
+    public boolean isDraw() {
+        return draw;
+    }
+
 }

@@ -21,5 +21,5 @@ public enum RequestType {
     START_GAME,
     MOVE,
     GAME_OVER,
-    LOGOUT
+    LOGOUT,
 }
