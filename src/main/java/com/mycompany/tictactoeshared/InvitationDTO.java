@@ -12,18 +12,15 @@ import java.io.Serializable;
 
 public class InvitationDTO implements Serializable {
     
-    private String fromUsername;
-    private String toUsername;
-    private int score;
-
-    public InvitationDTO(String fromUsername, String toUsername,int score) {
-        this.fromUsername = fromUsername;
-        this.toUsername = toUsername;
-        this.score = score;
+    private PlayerDTO fromUser;
+    private PlayerDTO toUser;
+      
+    public InvitationDTO(PlayerDTO fromUser,PlayerDTO toUser){
+        this.fromUser = fromUser;
+        this.toUser = toUser;
     }
-
-    public String getFromUsername() { return fromUsername; }
-    public String getToUsername()   { return toUsername;   }
-    public int getScore()   { return score;   }
+    
+    public PlayerDTO getFromUsername() { return fromUser; }
+    public PlayerDTO getToUsername()   { return toUser;   }
     
 }
