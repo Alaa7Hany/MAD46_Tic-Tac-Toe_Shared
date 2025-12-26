@@ -22,4 +22,5 @@ public enum RequestType {
     MOVE,
     GAME_OVER,
     LOGOUT,
+    REMATCH_REQUEST,
 }
