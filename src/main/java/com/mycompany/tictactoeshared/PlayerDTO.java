@@ -33,4 +33,7 @@ public class PlayerDTO implements Serializable {
         return isOnline;
     }
     
+    public void incrementScore(){
+        this.score+=1;
+    }
 }
